@@ -23,23 +23,40 @@ export default function AuthLayout({
               "Track every scholarship, meet every deadline, and turn your
               academic dreams into reality — all from one place."
             </p>
-            <footer className="text-sm text-slate-400">
-              Built for ambitious students worldwide
-            </footer>
           </blockquote>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-          {[
-            { value: "10K+", label: "Students" },
-            { value: "500+", label: "Scholarships" },
-            { value: "$2M+", label: "Awarded" },
-          ].map((stat) => (
-            <div key={stat.label} className="rounded-lg bg-white/10 p-4">
-              <div className="text-2xl font-bold">{stat.value}</div>
-              <div className="text-sm text-slate-400">{stat.label}</div>
+        <div className="space-y-6">
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4">
+            {[
+              { value: "10K+", label: "Students" },
+              { value: "500+", label: "Scholarships" },
+              { value: "$2M+", label: "Awarded" },
+            ].map((stat) => (
+              <div key={stat.label} className="rounded-lg bg-white/10 p-4">
+                <div className="text-2xl font-bold">{stat.value}</div>
+                <div className="text-sm text-slate-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Creator Credit with Photo */}
+          <div className="flex items-center gap-3 border-t border-white/10 pt-6">
+            <img
+              src="https://github.com/islamshofiqul807.png"
+              alt="Shafiqul Islam Fahim"
+              className="h-12 w-12 rounded-full border-2 border-white/30 object-cover"
+            />
+            <div>
+              <p className="text-sm font-semibold text-white">
+                Shafiqul Islam Fahim
+              </p>
+              <p className="text-xs text-slate-400">
+                Creator · ScholarTrack 2026
+              </p>
             </div>
-          ))}
+          </div>
         </div>
       </div>
 
