@@ -9,9 +9,7 @@ import {
   FolderOpen,
   Settings,
   LogOut,
-  ChevronLeft,
   Sparkles,
-  Bell,
 } from "lucide-react";
 import { cn } from "@/utils";
 import { Button } from "@/components/ui/button";
@@ -22,31 +20,11 @@ import { getInitials } from "@/utils";
 import { APP_NAME } from "@/lib/constants";
 
 const navItems = [
-  {
-    label: "Dashboard",
-    href: "/dashboard",
-    icon: LayoutDashboard,
-  },
-  {
-    label: "Scholarships",
-    href: "/scholarships",
-    icon: GraduationCap,
-  },
-  {
-    label: "Applications",
-    href: "/applications",
-    icon: FileText,
-  },
-  {
-    label: "Documents",
-    href: "/documents",
-    icon: FolderOpen,
-  },
-  {
-    label: "Settings",
-    href: "/settings",
-    icon: Settings,
-  },
+  { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+  { label: "Scholarships", href: "/scholarships", icon: GraduationCap },
+  { label: "Applications", href: "/applications", icon: FileText },
+  { label: "Documents", href: "/documents", icon: FolderOpen },
+  { label: "Settings", href: "/settings", icon: Settings },
 ];
 
 interface SidebarProps {
@@ -145,6 +123,13 @@ export function Sidebar({ user, pendingReminders = 0 }: SidebarProps) {
             </Button>
           </form>
         </div>
+      </div>
+
+      {/* Credit */}
+      <div className="px-4 pb-3 text-center">
+        <p className="text-[10px] text-muted-foreground">
+          Built by Shafiqul Islam Fahim © 2026
+        </p>
       </div>
     </aside>
   );
